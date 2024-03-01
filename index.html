@@ -1,68 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Airport Calculator</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #b8b3b6;
-        }
-
-        .jumbotron {
-            margin-top: 0; 
-        }
-
-        #map {
-            width: 100%; 
-            height: 600px; 
-            margin-top: 20px; 
-        }
-
-        .form-container {
-            margin-top: 20px; 
-            text-align: center;
-        }
-
-        .panel {
-            margin-top: 20px; 
-            text-align: center; 
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title font face="Arial">Airport Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      color: navy;
+      background-color: #FFF1E5;
+    }
+    .container {
+      flex: 1;
+    }
+  
+    .jumbotron {
+      margin-bottom: 20px;
+      
+    }
+  
+    #charts-container {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-around;
+      
+    }
+  
+    #bar1,
+    #bar2,
+    #map-container {
+      height: 400px;
+      width: 100%;
+    }
+  
+    #bar1 {
+      width: calc(50% - 5px); 
+    }
+  
+    #bar2 {
+      width: calc(50% - 5px); 
+    }
+    #map-container {
+      width: 100%;
+    }
+  
+    #map {
+      height: 100%; 
+      width: 100%; 
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="col-md-12 jumbotron text-center">
-            <h1 style="font-family: Arial">Airport Info Dashboard</h1>
-            <p style="font-family: Arial">Use the interactive charts below to explore the dataset</p>
+
+  <div class="container">
+    <div class="row">
+      <div style="background : #8ea3d8be" class="col-md-12 jumbotron text-center">
+        <h1 font face="Arial">Airport Calculator</h1>
+        <p font face="Arial">Let's explore the airports of the world! Use the interactive charts below to explore the OpenFlights dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Please enter IATA airport code below</h5>
+          <input type="text" style="font-family: Arial" id="airportCode" placeholder="E.g., JFK" />
+          <button id="plotButton" style="font-family: Arial">Plot Routes</button>
         </div>
-    </div>
-
-    <div class="form-container">
-        <label for="airportCode" style="font-family: Arial">Enter Airport IATA Code:</label>
-        <input type="text" style="font-family: Arial" id="airportCode" placeholder="E.g., JFK" />
-        <button id="plotButton" style="font-family: Arial" >Plot Routes</button>
-    </div>
-
-    <div id="map"></div>
-
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title" style="font-family: Arial">Information:</h3>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title" font face="Arial">Airport Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
         </div>
-        <div id="sample-metadata" class="panel-body"></div>
+      </div>
+      <div id="charts-container" class="col-md-10">
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+      </div>
     </div>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="app.js"></script>
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <script src = "app.js"></script>
 </body>
+
 </html>
