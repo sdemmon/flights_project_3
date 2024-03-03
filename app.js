@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
         /// finding the airline info by matching to the airline id airlines json 
         var airline = airlinesData.find(function(airline) {
           // checking if the airlineId the airline id in json
+          // wouldn't load unless string tirned into integer with parseInt
           return airline.airline_id === parseInt(airlineId);
         });
         // creating an object with the airline name and the number of routes stored in airlines 
@@ -221,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
           return airline.airline;
         }),
         // y will equal the number of routes
-        y: top15Airlines.map(function(airline) {
+        y: topAirlinesInfo.map(function(airline) {
           return airline.routes;
         }),
         type: 'bar'
