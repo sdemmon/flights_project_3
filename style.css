@@ -1,0 +1,120 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.myapp {
+    position: relative;
+    /* Ensure this context for absolute positioning of children */
+    width: 100%;
+    /* Full width */
+    min-height: 100vh;
+    /* Minimum height to cover the viewport */
+    overflow: hidden;
+    /* In case of any overflow */
+}
+
+.bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    /* Make sure this covers the full area of its parent */
+    position: relative;
+    /* For the overlay */
+}
+
+.bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+}
+
+.myapp .bg * {
+    position: relative;
+    z-index: 2;
+    /* Ensures content is above the overlay */
+}
+.title{
+    color:#fff;
+}
+.title-text{
+    color:#5BC0DE;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    letter-spacing: 1.1px;
+    font-style: italic;
+    
+}
+.sec-title{
+    color:#fff;
+    font-size: 1.5rem;
+    letter-spacing: 1.1px;
+    font-style: italic;
+    font-weight: bolder;
+   
+    
+}
+.chart-flex{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+   
+}
+#info-container .panel,
+#info-container .panel-heading,
+#info-container .panel-body {
+    opacity:0.8;
+    color:black;
+    
+  
+}
+
+#info-container .panel {
+   height:400px;
+   width:300px;
+}
+#bar1,
+#bar2 {
+    height: 400px;
+    width:300px;
+
+}
+
+#map-container {
+    height: 400px;
+    
+
+}
+
+
+
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+ @media screen and (max-width: 925px){
+    .chart-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+        .bg,
+        .bg::before {
+            width: 100%;
+           
+            height: 100%;
+           
+        }
+    
+ }
