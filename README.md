@@ -1,8 +1,10 @@
 # Airport Calculator 
 
-For our data visulaization project we were motivated to build a travel route search engine with visual aides to guide the trip selection process. With so many flights departing from each airport. this tool has the potenital to help travelers find the most direct route for travel as well as observe the possible destination arirports that a the given airport is capable of traveling to. The singifnace of this project relies on addressing the challenges each of face when travling. Travelers who hate layovers (like me!) are able to see only NON–STOP flights. We believe that it is useful to model travel in a digestibale manner without pricing information distrcating from goals. 
+Purpose
+Our data visualization project aims to develop a travel route search engine equipped with visual aids to facilitate the trip selection process. With the vast array of flights departing from each airport, our tool has the potential to assist travelers in finding the most direct route for their travel needs and exploring possible destination airports reachable from a given airport. The significance of this project lies in addressing the challenges travelers face, particularly those who prefer non-stop flights or seek a clear overview of available travel routes without being overwhelmed by pricing information.
 
-To accomplish this goal, we created a user-friendly, interactive webpage. The user is prompted to search any airport IATA code. If the user is unsure what the IATA code is that associated with the airport, there is a button "Airport Code Search" that links to another webpage listing the location, country, and airport code – because who even knows IATA codes for Arnavutköy, Istanbul in Turkey! After the user inserts the code, the webpage shows three visualizations including two bar graph dsiplaying "Top Ten Destinations" and "Top Airlines" as well as a map that visually displays all possible destaination airports you can fly to. With each search, the map automatically zooms into the users airport and they can zoom out to view the destination airports. Additionally, with each search the image refreshes in the backgorund to a new image.
+User Interface
+Our user-friendly, interactive webpage prompts users to search for any airport using its IATA code. For users unsure of the IATA code associated with a specific airport, we provide a convenient "Airport Code Search" button that links to a separate webpage listing airport locations, countries, and codes. Once users input the code, the webpage displays three visualizations: two bar graphs showcasing the "Top Ten Destinations" and "Top Airlines," along with a map illustrating all possible destination airports reachable from the selected airport. With each search, the map automatically zooms into the user's airport, allowing them to zoom out to view destination airports. Additionally, the background image refreshes with each search, providing a fresh visual experience.
 
 Example: 
 
@@ -25,4 +27,9 @@ The main functionality revolves around plotting routes and airports on the map. 
 
 
 Additionally, the code generates bar graphs using the Plotly.js library to visually represent the top ten destinations from a selected airport and the top airlines operating from that airport. These bar graphs provide insights into the popularity of destinations and airlines associated with the selected airport.
+
 ![Screenshot 2024-03-04 at 8 53 01 AM](https://github.com/sdemmon/flights_project_3/assets/141437641/934bb368-29b6-47ab-ad0f-e671936ecdc5)
+
+
+Areas to Improve
+To enhance this project further, we plan to incorporate pricing information and utilize an updated data source with more recent information. Additionally, we aim to develop a price calculator feature and provide details on airport amenities, including hotels, restaurants, and shopping options. These enhancements will enrich the user experience and make the tool even more valuable for travelers.
