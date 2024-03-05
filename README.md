@@ -48,7 +48,7 @@ The data sources are made available through a downloadable .dat file. When savin
 
 or 
 
-1. click on this guthub pages [link](link to github pages )
+1. click on this guthub pages [link](https://sdemmon.github.io/flights_project_3/ )
 2. use airportcodes.html to search for the iata code of your desired airport 
 3. input any airport iata code into the box and click on the plot routes button
 
@@ -107,8 +107,10 @@ The data visualization belly-button-challenge and the leafly-challenge from the 
 ### Areas to Improve
 To enhance this project further, we plan to incorporate pricing information and utilize an updated data source with more recent information. Additionally, we aim to develop a price calculator feature and provide details on airport amenities, including hotels, restaurants, and shopping options. These enhancements will enrich the user experience and make the tool even more valuable for travelers. With the openflights dataset we would also be able to create another feature which would let the used know based on source airport what are the most popular aircrafts and on what route they most commonly used in. 
 
-### Depoloyment Key 
-You can access the website here: https://sdemmon.github.io/flights_project_3/
+### Deployment Key 
+
+https://sdemmon.github.io/flights_project_3/
+
 
 # Developed by: 
 \
